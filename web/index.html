@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QBX Used Cars</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ox_lib-style overlay -->
+  <div id="overlay" class="overlay hidden"></div>
+
+  <!-- MARKET: ox-like context list -->
+  <div id="market" class="panel hidden" role="dialog" aria-modal="true" aria-labelledby="marketTitle">
+    <div class="panel-header">
+      <h1 id="marketTitle" class="panel-title">
+        <span class="dot"></span> Used Cars Nearby
+      </h1>
+      <button id="closeMarket" class="btn" aria-label="Close">CERRAR</button>
+    </div>
+    <div id="marketList" class="list"></div>
+  </div>
+
+  <!-- LISTING: ox-like input/basic dialog -->
+  <div id="listingModal" class="panel dialog hidden" role="dialog" aria-modal="true" aria-labelledby="listingTitle">
+    <div class="panel-header">
+      <h1 id="listingTitle" class="panel-title">Listing Details</h1>
+      <button id="closeModal" class="btn icon" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <p class="kv"><strong>Plate:</strong> <span id="plate"></span></p>
+      <p class="kv"><strong>Seller:</strong> <span id="seller"></span></p>
+      <p class="kv"><strong>Price:</strong> $<span id="price"></span></p>
+    </div>
+    <div class="actions">
+      <button id="cancelBtn" class="btn">CANCEL</button>
+      <button id="buyBtn" class="btn primary">CONFIRM</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
